@@ -1,0 +1,9 @@
+
+/* Custom utilities if needed */
+html[dir="rtl"] {
+    text-align: right;
+}
+html[dir="rtl"] #mobile-menu {
+    left: auto;
+    right: 0;
+}

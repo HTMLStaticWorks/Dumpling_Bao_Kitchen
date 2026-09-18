@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Alternative | Bamboo & Flour</title>
+    <meta name="description" content="Editorial showcase of Bamboo & Flour.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        stone: {
+                            50: '#fafaf9',
+                            800: '#292524',
+                            900: '#1c1917',
+                            950: '#0c0a09',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="bg-stone-50 text-stone-900 dark:bg-stone-900 dark:text-stone-100 transition-colors duration-300 antialiased selection:bg-orange-200 selection:text-orange-900 flex flex-col min-h-screen">
+    <script>
+        // Inline script to prevent FOUC for theme and RTL
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+        if (localStorage.getItem('dir') === 'rtl') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        }
+    </script>
+
+    <header
+        class="fixed w-full z-50 bg-white dark:bg-stone-900 transition-colors duration-300 shadow-sm border-b border-stone-200 dark:border-stone-800"
+        id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <svg class="w-8 h-8 text-orange-600 dark:text-orange-500" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="12" width="16" height="8" rx="2" />
+                            <path d="M2 12h20" />
+                            <path d="M6 12C6 8 8 6 12 6s6 2 6 6" />
+                            <path d="M10 6V4h4v2" />
+                            <path d="M9 2s1 1 1 2-1 1-1 2" />
+                            <path d="M15 2s1 1 1 2-1 1-1 2" />
+                        </svg>
+                        <span
+                            class="font-serif text-xl font-bold text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors">Bamboo
+                            & Flour</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex space-x-8 items-center" id="desktop-nav">
+                    <a href="index.html"
+                        class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">Home</a>
+                    <a href="home2.html"
+                        class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">Home
+                        2</a>
+                    <a href="about.html"
+                        class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">About</a>
+                    <a href="menu.html"
+                        class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">Menu</a>
+                    <a href="blog.html"
+                        class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">Blog</a>
+                    <a href="contact.html"
+                        class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-9 h-9 flex items-center justify-center text-stone-500 hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400 transition-colors border border-stone-200 dark:border-stone-700 rounded-md"
+                        aria-label="Toggle Theme">
+                        <svg class="w-4 h-4 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                        <svg class="w-4 h-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="rtl-toggle"
+                        class="w-9 h-9 flex items-center justify-center text-stone-500 hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400 transition-colors font-medium text-xs border border-stone-200 dark:border-stone-700 rounded-md"
+                        aria-label="Toggle RTL">
+                        RTL
+                    </button>
+
+                    <a href="signup.html"
+                        class="bg-orange-600 hover:bg-orange-700 text-white px-5 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-lg">Sign
+                        Up</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center lg:hidden space-x-2">
+                    <button id="mobile-theme-toggle"
+                        class="p-2 text-stone-500 hover:text-orange-600 dark:text-stone-400 transition-colors">
+                        <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn"
+                        class="text-stone-600 dark:text-stone-300 hover:text-orange-600 p-2 focus:outline-none"
+                        aria-label="Menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Home</a>
+                <a href="home2.html"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Home
+                    2</a>
+                <a href="about.html"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">About</a>
+                <a href="menu.html"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Menu</a>
+                <a href="blog.html"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Blog</a>
+                <a href="contact.html"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Contact</a>
+                <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-col gap-3">
+                    <button id="mobile-rtl-toggle"
+                        class="w-full text-left px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800">Toggle
+                        RTL/LTR</button>
+
+                    <a href="signup.html"
+                        class="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-full font-medium transition-colors">Sign
+                        Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="pt-20 flex-grow">
+        <!-- Editorial Hero -->
+        <section class="min-h-screen flex flex-col lg:flex-row bg-stone-50 dark:bg-stone-900 pt-20 lg:pt-0">
+            <div class="lg:w-1/2 flex items-center justify-center p-8 lg:p-16 z-10 relative">
+                <div class="max-w-xl">
+                    <h1
+                        class="text-6xl md:text-8xl font-serif font-black text-stone-900 dark:text-white leading-none tracking-tight mb-8">
+                        Steam <br /><span class="text-orange-600 dark:text-orange-500">& Fold.</span></h1>
+                    <p class="text-xl md:text-2xl text-stone-600 dark:text-stone-300 font-light mb-12">Redefining the
+                        modern dumpling experience with heritage techniques and uncompromising ingredients.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="menu.html"
+                            class="bg-stone-900 dark:bg-white text-white dark:text-stone-900 hover:bg-orange-600 dark:hover:bg-orange-500 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors text-center">Discover
+                            the Menu</a>
+                        <a href="about.html"
+                            class="border-2 border-stone-900 dark:border-white text-stone-900 dark:text-white hover:bg-stone-100 dark:hover:bg-stone-800 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors text-center">Our
+                            Craft</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative h-[50vh] lg:h-screen">
+                <img src="https://images.pexels.com/photos/8093299/pexels-photo-8093299.jpeg"
+                    alt="Close up of handmade dumplings" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Dumpling Craft -->
+        <section class="py-24 bg-stone-900 dark:bg-stone-950 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold">The Art of the Fold</h2>
+                        <div class="h-1 w-20 bg-orange-500"></div>
+                        <p class="text-lg text-stone-300 leading-relaxed">Our dumpling wrappers are made daily using
+                            only flour, water, and time. It's a delicate balance of hydration and resting that yields
+                            the perfect chew, strong enough to hold our rich, savory broths and fillings.</p>
+                        <p class="text-lg text-stone-300 leading-relaxed">Each dumpling is pleated by hand—a rhythmic,
+                            meditative process that ensures a perfect seal and a beautiful presentation in the steamer
+                            basket.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop"
+                            alt="Steamer" class="w-full h-64 object-cover rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=2129&auto=format&fit=crop"
+                            alt="Dumplings" class="w-full h-64 object-cover rounded-sm mt-8">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bao Bar -->
+        <section class="py-24 bg-orange-50 dark:bg-stone-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif font-bold text-stone-900 dark:text-white mb-4">The Bao Bar</h2>
+                    <p class="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">Soft, pillowy steamed buns with
+                        bold, textured fillings.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?q=80&w=1925&auto=format&fit=crop"
+                                alt="Char Siu Bao"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3">Char Siu</h3>
+                            <p class="text-stone-600 dark:text-stone-400 mb-6">Sweet roasted pork, scallions, rich soy
+                                glaze.</p>
+                            <a href="menu.html"
+                                class="text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
+                                Now</a>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=2070&auto=format&fit=crop"
+                                alt="Mushroom Bao"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3">Spicy Mushroom
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-400 mb-6">Shiitake, wood ear, chili crisp,
+                                cilantro.</p>
+                            <a href="menu.html"
+                                class="text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
+                                Now</a>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop"
+                                alt="Chicken Bao"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3">Ginger Chicken
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-400 mb-6">Minced chicken, fresh ginger, sesame oil.
+                            </p>
+                            <a href="menu.html"
+                                class="text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Favorites -->
+        <section class="py-24 bg-white dark:bg-stone-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-stone-900 dark:text-white mb-16">
+                    Most Loved</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- 1 -->
+                    <div class="relative group cursor-pointer">
+                        <img src="https://images.pexels.com/photos/5774157/pexels-photo-5774157.jpeg" alt="Favorite 1"
+                            class="w-full h-80 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-stone-900/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Pork & Chive</h3>
+                                <p class="text-orange-400 font-medium">$8.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="relative group cursor-pointer">
+                        <img src="https://images.pexels.com/photos/2098120/pexels-photo-2098120.jpeg" alt="Favorite 2"
+                            class="w-full h-80 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-stone-900/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Vegetable Gyoza</h3>
+                                <p class="text-orange-400 font-medium">$7.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="relative group cursor-pointer">
+                        <img src="https://images.pexels.com/photos/32860330/pexels-photo-32860330.jpeg" alt="Favorite 3"
+                            class="w-full h-80 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-stone-900/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Char Siu Bao</h3>
+                                <p class="text-orange-400 font-medium">$6.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="relative group cursor-pointer">
+                        <img src="https://images.pexels.com/photos/19423056/pexels-photo-19423056.jpeg" alt="Favorite 4"
+                            class="w-full h-80 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-stone-900/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Shrimp & Ginger</h3>
+                                <p class="text-orange-400 font-medium">$9.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Split CTA -->
+        <section class="grid grid-cols-1 md:grid-cols-2">
+            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden">
+                <img src="https://images.pexels.com/photos/8093867/pexels-photo-8093867.jpeg"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-stone-900/50"></div>
+                <div class="relative z-10 text-center p-8">
+                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Dine at Our Kitchen</h2>
+                    <a href="contact.html"
+                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Book
+                        a Table</a>
+                </div>
+            </div>
+            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden bg-orange-600">
+                <img src="https://images.pexels.com/photos/7363968/pexels-photo-7363968.jpeg"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 mix-blend-multiply opacity-50">
+                <div class="relative z-10 text-center p-8">
+                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Enjoy at Home</h2>
+                    <a href="menu.html#frozen"
+                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Shop
+                        Frozen Packs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-stone-950 text-stone-300 py-16 border-t-4 border-orange-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="12" width="16" height="8" rx="2" />
+                            <path d="M2 12h20" />
+                            <path d="M6 12C6 8 8 6 12 6s6 2 6 6" />
+                            <path d="M10 6V4h4v2" />
+                            <path d="M9 2s1 1 1 2-1 1-1 2" />
+                            <path d="M15 2s1 1 1 2-1 1-1 2" />
+                        </svg>
+                        <span
+                            class="font-serif text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Bamboo
+                            & Flour</span>
+                    </a>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Handmade daily in our steam kitchens. We bring authentic flavors and contemporary craft to every
+                        dumpling and bao we serve.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-stone-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explore -->
+                <div>
+                    <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-orange-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-orange-400 transition-colors">About Us</a></li>
+                        <li><a href="menu.html" class="hover:text-orange-400 transition-colors">Menu</a></li>
+                        <li><a href="blog.html" class="hover:text-orange-400 transition-colors">Journal & Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer -->
+                <div>
+                    <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Customer</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="contact.html" class="hover:text-orange-400 transition-colors">Contact &
+                                Enquiries</a></li>
+                        <li><a href="login.html" class="hover:text-orange-400 transition-colors">Account Login</a></li>
+                        <li><a href="signup.html" class="hover:text-orange-400 transition-colors">Create Account</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span>hello@dumplingbao.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Mon - Sun: 11:00 AM - 10:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="mt-16 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500">
+                <p>&copy; 2026 Bamboo & Flour. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top"
+        class="fixed bottom-8 right-8 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-50 transform translate-y-4"
+        aria-label="Scroll to top">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
