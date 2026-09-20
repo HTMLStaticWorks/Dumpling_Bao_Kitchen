@@ -40,6 +40,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body
@@ -55,7 +56,7 @@
     </script>
 
     <header
-        class="fixed w-full z-50 bg-white dark:bg-stone-900 transition-colors duration-300 shadow-sm border-b border-stone-200 dark:border-stone-800"
+        class="fixed w-full z-50 bg-white dark:bg-stone-900 transition-colors duration-300 shadow-sm border-b border-stone-200 dark:border-stone-200 dark:border-stone-800"
         id="main-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -78,7 +79,7 @@
                 </div>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden lg:flex space-x-8 items-center" id="desktop-nav">
+                <nav class="hidden lg:flex gap-8 items-center" id="desktop-nav">
                     <a href="index.html"
                         class="nav-link text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors">Home</a>
                     <a href="home2.html"
@@ -95,9 +96,9 @@
                 </nav>
 
                 <!-- Actions -->
-                <div class="hidden lg:flex items-center space-x-4">
+                <div class="hidden lg:flex items-center gap-4">
                     <button id="theme-toggle"
-                        class="w-9 h-9 flex items-center justify-center text-stone-500 hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400 transition-colors border border-stone-200 dark:border-stone-700 rounded-md"
+                        class="w-9 h-9 flex items-center justify-center text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400 transition-colors border border-stone-200 dark:border-stone-700 rounded-md"
                         aria-label="Toggle Theme">
                         <svg class="w-4 h-4 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -111,7 +112,7 @@
                         </svg>
                     </button>
                     <button id="rtl-toggle"
-                        class="w-9 h-9 flex items-center justify-center text-stone-500 hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400 transition-colors font-medium text-xs border border-stone-200 dark:border-stone-700 rounded-md"
+                        class="w-9 h-9 flex items-center justify-center text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400 transition-colors font-medium text-xs border border-stone-200 dark:border-stone-700 rounded-md"
                         aria-label="Toggle RTL">
                         RTL
                     </button>
@@ -122,9 +123,9 @@
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="flex items-center lg:hidden space-x-2">
+                <div class="flex items-center lg:hidden gap-2">
                     <button id="mobile-theme-toggle"
-                        class="p-2 text-stone-500 hover:text-orange-600 dark:text-stone-400 transition-colors">
+                        class="p-2 text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:text-stone-400 transition-colors">
                         <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
@@ -150,7 +151,7 @@
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
-            class="hidden lg:hidden bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 shadow-lg absolute w-full">
+            class="hidden lg:hidden bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-200 dark:border-stone-800 shadow-lg absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html"
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Home</a>
@@ -165,7 +166,7 @@
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Blog</a>
                 <a href="contact.html"
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Contact</a>
-                <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-col gap-3">
+                <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-200 dark:border-stone-800 flex flex-col gap-3">
                     <button id="mobile-rtl-toggle"
                         class="w-full text-left px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800">Toggle
                         RTL/LTR</button>
@@ -178,28 +179,27 @@
         </div>
     </header>
     <main class="pt-20 flex-grow">
-        <!-- Editorial Hero -->
-        <section class="min-h-screen flex flex-col lg:flex-row bg-stone-50 dark:bg-stone-900 pt-20 lg:pt-0">
-            <div class="lg:w-1/2 flex items-center justify-center p-8 lg:p-16 z-10 relative">
-                <div class="max-w-xl">
-                    <h1
-                        class="text-6xl md:text-8xl font-serif font-black text-stone-900 dark:text-white leading-none tracking-tight mb-8">
-                        Steam <br /><span class="text-orange-600 dark:text-orange-500">& Fold.</span></h1>
-                    <p class="text-xl md:text-2xl text-stone-600 dark:text-stone-300 font-light mb-12">Redefining the
-                        modern dumpling experience with heritage techniques and uncompromising ingredients.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="menu.html"
-                            class="bg-stone-900 dark:bg-white text-white dark:text-stone-900 hover:bg-orange-600 dark:hover:bg-orange-500 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors text-center">Discover
-                            the Menu</a>
-                        <a href="about.html"
-                            class="border-2 border-stone-900 dark:border-white text-stone-900 dark:text-white hover:bg-stone-100 dark:hover:bg-stone-800 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors text-center">Our
-                            Craft</a>
-                    </div>
+        <section class="grid grid-cols-1 md:grid-cols-2">
+            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden">
+                <img src="https://images.pexels.com/photos/8093867/pexels-photo-8093867.jpeg"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-stone-900/50"></div>
+                <div class="relative z-10 text-center p-8">
+                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Dine at Our Kitchen</h2>
+                    <a href="contact.html"
+                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Book
+                        a Table</a>
                 </div>
             </div>
-            <div class="lg:w-1/2 relative h-[50vh] lg:h-screen">
-                <img src="https://images.pexels.com/photos/8093299/pexels-photo-8093299.jpeg"
-                    alt="Close up of handmade dumplings" class="w-full h-full object-cover">
+            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden bg-orange-600">
+                <img src="https://images.pexels.com/photos/7363968/pexels-photo-7363968.jpeg"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 mix-blend-multiply opacity-50">
+                <div class="relative z-10 text-center p-8">
+                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Enjoy at Home</h2>
+                    <a href="menu.html#frozen"
+                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Shop
+                        Frozen Packs</a>
+                </div>
             </div>
         </section>
 
@@ -219,9 +219,9 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop"
-                            alt="Steamer" class="w-full h-64 object-cover rounded-sm">
+                            alt="Steamer" class="w-full aspect-square object-cover rounded-sm">
                         <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=2129&auto=format&fit=crop"
-                            alt="Dumplings" class="w-full h-64 object-cover rounded-sm mt-8">
+                            alt="Dumplings" class="w-full aspect-square object-cover rounded-sm">
                     </div>
                 </div>
             </div>
@@ -236,50 +236,50 @@
                         bold, textured fillings.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group">
+                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group flex flex-col h-full">
                         <div class="h-64 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?q=80&w=1925&auto=format&fit=crop"
                                 alt="Char Siu Bao"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
-                        <div class="p-8 text-center">
+                        <div class="p-8 text-center flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3">Char Siu</h3>
                             <p class="text-stone-600 dark:text-stone-400 mb-6">Sweet roasted pork, scallions, rich soy
                                 glaze.</p>
                             <a href="menu.html"
-                                class="text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
+                                class="mt-auto text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
                                 Now</a>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group">
+                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group flex flex-col h-full">
                         <div class="h-64 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=2070&auto=format&fit=crop"
                                 alt="Mushroom Bao"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
-                        <div class="p-8 text-center">
+                        <div class="p-8 text-center flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3">Spicy Mushroom
                             </h3>
                             <p class="text-stone-600 dark:text-stone-400 mb-6">Shiitake, wood ear, chili crisp,
                                 cilantro.</p>
                             <a href="menu.html"
-                                class="text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
+                                class="mt-auto text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
                                 Now</a>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group">
+                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group flex flex-col h-full">
                         <div class="h-64 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop"
                                 alt="Chicken Bao"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
-                        <div class="p-8 text-center">
+                        <div class="p-8 text-center flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3">Ginger Chicken
                             </h3>
                             <p class="text-stone-600 dark:text-stone-400 mb-6">Minced chicken, fresh ginger, sesame oil.
                             </p>
                             <a href="menu.html"
-                                class="text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
+                                class="mt-auto text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
                                 Now</a>
                         </div>
                     </div>
@@ -346,31 +346,24 @@
         </section>
 
         <!-- Split CTA -->
-        <section class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden">
-                <img src="https://images.pexels.com/photos/8093867/pexels-photo-8093867.jpeg"
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-stone-900/50"></div>
-                <div class="relative z-10 text-center p-8">
-                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Dine at Our Kitchen</h2>
-                    <a href="contact.html"
-                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Book
-                        a Table</a>
-                </div>
+        <!-- CTA Section -->
+        <section class="py-24 bg-orange-600 relative overflow-hidden">
+            <div
+                class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent">
             </div>
-            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden bg-orange-600">
-                <img src="https://images.pexels.com/photos/7363968/pexels-photo-7363968.jpeg"
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 mix-blend-multiply opacity-50">
-                <div class="relative z-10 text-center p-8">
-                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Enjoy at Home</h2>
-                    <a href="menu.html#frozen"
-                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Shop
-                        Frozen Packs</a>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Craving Authenticity?</h2>
+                <p class="text-xl text-orange-100 mb-10">Join us for a meal or bring our kitchen to yours. Experience
+                    the best handmade dumplings and bao today.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html"
+                        class="bg-orange-700 border border-orange-500 text-white hover:bg-orange-800 px-8 py-4 rounded-full font-bold transition-colors shadow-lg text-lg">Enquire
+                        Now</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="bg-stone-950 text-stone-300 py-16 border-t-4 border-orange-600">
+    <footer class="bg-stone-100 dark:bg-stone-950 text-stone-600 dark:text-stone-300 py-16 border-t-4 border-orange-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Brand -->
@@ -386,21 +379,21 @@
                             <path d="M15 2s1 1 1 2-1 1-1 2" />
                         </svg>
                         <span
-                            class="font-serif text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Bamboo
+                            class="font-serif text-xl font-bold text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Bamboo
                             & Flour</span>
                     </a>
-                    <p class="text-stone-400 text-sm leading-relaxed">
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
                         Handmade daily in our steam kitchens. We bring authentic flavors and contemporary craft to every
                         dumpling and bao we serve.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-stone-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <div class="flex gap-4">
+                        <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors" aria-label="Instagram">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-stone-400 hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors" aria-label="Facebook">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
@@ -411,30 +404,30 @@
 
                 <!-- Explore -->
                 <div>
-                    <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="index.html" class="hover:text-orange-400 transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:text-orange-400 transition-colors">About Us</a></li>
-                        <li><a href="menu.html" class="hover:text-orange-400 transition-colors">Menu</a></li>
-                        <li><a href="blog.html" class="hover:text-orange-400 transition-colors">Journal & Blog</a></li>
+                        <li><a href="index.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About Us</a></li>
+                        <li><a href="menu.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Menu</a></li>
+                        <li><a href="blog.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Journal & Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Customer -->
                 <div>
-                    <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Customer</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Customer</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="contact.html" class="hover:text-orange-400 transition-colors">Contact &
+                        <li><a href="contact.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact &
                                 Enquiries</a></li>
-                        <li><a href="login.html" class="hover:text-orange-400 transition-colors">Account Login</a></li>
-                        <li><a href="signup.html" class="hover:text-orange-400 transition-colors">Create Account</a>
+                        <li><a href="login.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Account Login</a></li>
+                        <li><a href="signup.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Create Account</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div>
-                    <h3 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h3>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
@@ -467,11 +460,11 @@
             </div>
 
             <div
-                class="mt-16 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500">
+                class="mt-16 pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 dark:text-stone-400">
                 <p>&copy; 2026 Bamboo & Flour. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <div class="flex gap-6">
+                    <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
