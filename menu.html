@@ -94,10 +94,6 @@
 
             <!-- Mobile menu button -->
             <div class="flex items-center lg:hidden gap-2">
-                <button id="mobile-theme-toggle" class="p-2 text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:text-stone-400 transition-colors">
-                     <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                     <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                </button>
                 <button id="mobile-menu-btn" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 p-2 focus:outline-none" aria-label="Menu">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -117,6 +113,21 @@
             <a href="blog.html" class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Blog</a>
             <a href="contact.html" class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Contact</a>
             <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-200 dark:border-stone-800 flex flex-col gap-3">
+                    <button id="mobile-theme-toggle" class="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">
+                        Toggle Theme
+                        <div>
+                            <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
+                            </svg>
+                        </div>
+                    </button>
                 <button id="mobile-rtl-toggle" class="w-full text-left px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800">Toggle RTL/LTR</button>
 
                 <a href="signup.html" class="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-full font-medium transition-colors">Sign Up</a>
@@ -313,46 +324,46 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Product Card -->
-            <div class="bg-white dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-stone-100 dark:border-stone-200 dark:border-stone-800 group">
+            <div class="bg-white dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-stone-100 dark:border-stone-200 dark:border-stone-800 group flex flex-col h-full">
                 <div class="h-64 bg-stone-200 dark:bg-stone-800 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=2129&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-4 right-4 bg-white dark:bg-stone-900 text-orange-600 dark:text-orange-500 font-bold px-3 py-1 rounded-full text-sm shadow-sm">24 Pack</div>
                 </div>
-                <div class="p-6">
+                <div class="p-6 flex flex-col flex-grow">
                     <div class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-2">Dumpling</div>
                     <h3 class="text-xl font-bold text-stone-900 dark:text-white mb-2 min-h-[3.5rem]">Pork & Chive</h3>
-                    <p class="text-stone-600 dark:text-stone-400 text-sm mb-4">Our signature recipe. Ready to boil, pan-fry, or steam directly from frozen.</p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-stone-100 dark:border-stone-200 dark:border-stone-800">
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mb-4 flex-grow">Our signature recipe. Ready to boil, pan-fry, or steam directly from frozen.</p>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-stone-100 dark:border-stone-200 dark:border-stone-800 mt-auto">
                         <span class="font-bold text-stone-900 dark:text-white">$24.00</span>
                     </div>
                 </div>
             </div>
              <!-- Product Card -->
-             <div class="bg-white dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-stone-100 dark:border-stone-200 dark:border-stone-800 group">
+             <div class="bg-white dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-stone-100 dark:border-stone-200 dark:border-stone-800 group flex flex-col h-full">
                 <div class="h-64 bg-stone-200 dark:bg-stone-800 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-4 right-4 bg-white dark:bg-stone-900 text-orange-600 dark:text-orange-500 font-bold px-3 py-1 rounded-full text-sm shadow-sm">24 Pack</div>
                 </div>
-                <div class="p-6">
+                <div class="p-6 flex flex-col flex-grow">
                     <div class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-2">Gyoza</div>
                     <h3 class="text-xl font-bold text-stone-900 dark:text-white mb-2 min-h-[3.5rem]">Vegetable Gyoza</h3>
-                    <p class="text-stone-600 dark:text-stone-400 text-sm mb-4">Perfect for pan-frying. Vegan friendly filling with rich umami flavor.</p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-stone-100 dark:border-stone-200 dark:border-stone-800">
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mb-4 flex-grow">Perfect for pan-frying. Vegan friendly filling with rich umami flavor.</p>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-stone-100 dark:border-stone-200 dark:border-stone-800 mt-auto">
                         <span class="font-bold text-stone-900 dark:text-white">$22.00</span>
                     </div>
                 </div>
             </div>
              <!-- Product Card -->
-             <div class="bg-white dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-stone-100 dark:border-stone-200 dark:border-stone-800 group md:col-span-2 lg:col-span-1 md:w-[calc(50%_-_1rem)] md:mx-auto lg:w-full">
+             <div class="bg-white dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-stone-100 dark:border-stone-200 dark:border-stone-800 group md:col-span-2 lg:col-span-1 md:w-[calc(50%_-_1rem)] md:mx-auto lg:w-full flex flex-col h-full">
                 <div class="h-64 bg-stone-200 dark:bg-stone-800 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?q=80&w=1925&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-4 right-4 bg-white dark:bg-stone-900 text-orange-600 dark:text-orange-500 font-bold px-3 py-1 rounded-full text-sm shadow-sm">8 Pack</div>
                 </div>
-                <div class="p-6">
+                <div class="p-6 flex flex-col flex-grow">
                     <div class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-2">Bao</div>
                     <h3 class="text-xl font-bold text-stone-900 dark:text-white mb-2 min-h-[3.5rem]">Char Siu Bao</h3>
-                    <p class="text-stone-600 dark:text-stone-400 text-sm mb-4">Fluffy steamed buns. Reheats perfectly in the microwave or steamer.</p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-stone-100 dark:border-stone-200 dark:border-stone-800">
+                    <p class="text-stone-600 dark:text-stone-400 text-sm mb-4 flex-grow">Fluffy steamed buns. Reheats perfectly in the microwave or steamer.</p>
+                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-stone-100 dark:border-stone-200 dark:border-stone-800 mt-auto">
                         <span class="font-bold text-stone-900 dark:text-white">$18.00</span>
                     </div>
                 </div>
