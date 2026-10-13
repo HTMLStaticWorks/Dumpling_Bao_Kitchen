@@ -56,7 +56,7 @@
     </script>
 
     <header
-        class="fixed w-full z-50 bg-white dark:bg-stone-900 transition-colors duration-300 shadow-sm border-b border-stone-200 dark:border-stone-200 dark:border-stone-800"
+        class="fixed w-full z-50 bg-white dark:bg-stone-900 transition-colors duration-300 shadow-sm border-b border-stone-200 dark:border-stone-800"
         id="main-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -117,9 +117,14 @@
                         RTL
                     </button>
 
-                    <a href="signup.html"
-                        class="bg-orange-600 hover:bg-orange-700 text-white px-5 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-lg">Sign
-                        Up</a>
+                    <a href="menu.html"
+                        class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-orange-600/30">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span>Order Now</span>
+                    </a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -138,7 +143,7 @@
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
-            class="hidden lg:hidden bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-200 dark:border-stone-800 shadow-lg absolute w-full">
+            class="hidden lg:hidden bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 shadow-lg absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html"
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Home</a>
@@ -153,8 +158,9 @@
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Blog</a>
                 <a href="contact.html"
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Contact</a>
-                <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-200 dark:border-stone-800 flex flex-col gap-3">
-                    <button id="mobile-theme-toggle" class="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">
+                <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-col gap-3">
+                    <button id="mobile-theme-toggle"
+                        class="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">
                         Toggle Theme
                         <div>
                             <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,7 +168,8 @@
                                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
                                 </path>
                             </svg>
-                            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
                                 </path>
@@ -173,35 +180,283 @@
                         class="w-full text-left px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800">Toggle
                         RTL/LTR</button>
 
-                    <a href="signup.html"
-                        class="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-full font-medium transition-colors">Sign
-                        Up</a>
+                    <a href="menu.html"
+                        class="flex items-center justify-center gap-2 w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-full font-semibold transition-colors shadow-md">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span>Order Now</span>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
     <main class="pt-20 flex-grow">
-        <section class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden">
-                <img src="https://images.pexels.com/photos/8093867/pexels-photo-8093867.jpeg"
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-stone-900/50"></div>
-                <div class="relative z-10 text-center p-8">
-                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Dine at Our Kitchen</h2>
-                    <a href="contact.html"
-                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Book
-                        a Table</a>
-                </div>
+        <!-- Hero Section -->
+        <section
+            class="relative overflow-hidden bg-gradient-to-b from-orange-50/70 via-stone-50 to-white dark:from-stone-950 dark:via-stone-900 dark:to-stone-900 transition-colors duration-300">
+            <!-- Ambient Glow Accents -->
+            <div
+                class="absolute top-0 left-1/4 -translate-x-1/2 w-96 h-96 bg-orange-400/15 dark:bg-orange-500/10 rounded-full blur-3xl pointer-events-none -z-0">
             </div>
-            <div class="relative h-[60vh] flex items-center justify-center group overflow-hidden bg-orange-600">
-                <img src="https://images.pexels.com/photos/7363968/pexels-photo-7363968.jpeg"
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 mix-blend-multiply opacity-50">
-                <div class="relative z-10 text-center p-8">
-                    <h2 class="text-4xl font-serif font-bold text-white mb-6">Enjoy at Home</h2>
-                    <a href="menu.html#frozen"
-                        class="inline-block border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 uppercase tracking-wider font-bold text-sm transition-colors">Shop
-                        Frozen Packs</a>
+            <div
+                class="absolute top-1/3 right-10 w-96 h-96 bg-amber-400/15 dark:bg-amber-600/10 rounded-full blur-3xl pointer-events-none -z-0">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-24 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+                    <!-- Content Column (Clear Messaging & Strong Primary CTA) -->
+                    <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+
+                        <!-- Eyebrow Badge -->
+                        <div
+                            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white dark:bg-stone-800 border border-orange-200 dark:border-stone-700 shadow-sm text-stone-800 dark:text-stone-200 text-xs sm:text-sm font-medium">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span>
+                            </span>
+                            <span
+                                class="text-orange-600 dark:text-orange-400 font-bold uppercase text-xs tracking-wider">Artisan
+                                Kitchen</span>
+                            <span class="text-stone-300 dark:text-stone-600">|</span>
+                            <span>Hand-Pleated Daily with Heritage Flour</span>
+                        </div>
+
+                        <!-- Main Heading (SEO <h1>, High Visual Impact) -->
+                        <h1
+                            class="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-serif font-bold text-stone-900 dark:text-white leading-[1.12] tracking-tight">
+                            Fresh Handmade <br class="hidden sm:inline" />
+                            <span
+                                class="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
+                                Dumplings & Fluffy Bao
+                            </span>
+                            <br />
+                            Steamed to Perfection.
+                        </h1>
+
+                        <!-- Evocative & Clear Subtitle -->
+                        <p
+                            class="text-lg sm:text-xl text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Taste authentic culinary tradition in every fold. From delicate soup dumplings bursting with
+                            8-hour slow-simmered broth to pillow-soft steamed bao packed with braised pork belly and
+                            house chili crisp.
+                        </p>
+
+                        <!-- Primary CTA & Secondary Action -->
+                        <div
+                            class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center pt-2">
+                            <!-- Strong Primary CTA -->
+                            <a href="menu.html"
+                                class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group">
+                                <span>Order & Explore Menu</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+
+                            <!-- Secondary CTA -->
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center gap-2.5 bg-white dark:bg-stone-800 text-stone-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 border border-stone-200 dark:border-stone-700 hover:border-orange-500 dark:border-stone-700 px-7 py-4 rounded-full font-semibold text-lg shadow-sm hover:shadow transition-all duration-300">
+                                <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>Book a Table</span>
+                            </a>
+                        </div>
+
+                        <!-- Trust Highlights & Social Proof -->
+                        <div class="pt-6 border-t border-stone-200/80 dark:border-stone-800 space-y-4">
+                            <!-- Feature Pills Row -->
+                            <div
+                                class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 text-xs font-medium text-stone-700 dark:text-stone-300">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                                    <svg class="w-3.5 h-3.5 text-orange-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    100% Hand-Pleated
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                                    <svg class="w-3.5 h-3.5 text-orange-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Zero Preservatives
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                                    <svg class="w-3.5 h-3.5 text-orange-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Bamboo Steamed
+                                </span>
+                            </div>
+
+                            <!-- Rating & Social Proof -->
+                            <div class="flex items-center justify-center lg:justify-start gap-3 pt-1">
+                                <div class="flex -space-x-2">
+                                    <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-stone-900 object-cover"
+                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                                        alt="Customer review avatar">
+                                    <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-stone-900 object-cover"
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                                        alt="Customer review avatar">
+                                    <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-stone-900 object-cover"
+                                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
+                                        alt="Customer review avatar">
+                                </div>
+                                <div class="text-left flex items-center gap-2">
+                                    <div class="flex items-center text-amber-500 text-sm">
+                                        <span>★★★★★</span>
+                                        <span class="ml-1 font-bold text-stone-900 dark:text-white text-xs">4.9 /
+                                            5</span>
+                                    </div>
+                                    <span class="text-stone-300 dark:text-stone-700">•</span>
+                                    <p class="text-xs text-stone-500 dark:text-stone-400">2,400+ happy food lovers</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: High-Quality Food Imagery Showcase -->
+                    <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+
+                            <!-- Main High-Res Food Image -->
+                            <div
+                                class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-stone-800 group">
+                                <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=1200&auto=format&fit=crop"
+                                    alt="Freshly steamed soup dumplings in bamboo basket"
+                                    class="w-full h-[440px] sm:h-[490px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent pointer-events-none">
+                                </div>
+
+                                <!-- Floating Dish Badge at Bottom of Main Image -->
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 p-3.5 sm:p-4 rounded-2xl bg-white/95 dark:bg-stone-900/95 backdrop-blur-md border border-white/20 dark:border-stone-700/60 shadow-lg flex items-center justify-between gap-3 z-10">
+                                    <div class="flex items-center gap-3 min-w-0">
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-orange-100 dark:bg-orange-950/80 flex items-center justify-center text-orange-600 dark:text-orange-400 font-bold text-xl shrink-0">
+                                            🥟
+                                        </div>
+                                        <div class="min-w-0">
+                                            <div
+                                                class="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
+                                                Chef's Signature</div>
+                                            <div
+                                                class="font-serif font-bold text-stone-900 dark:text-white text-sm sm:text-base leading-tight truncate">
+                                                Xiao Long Bao (Soup Dumplings)</div>
+                                            <div class="text-[11px] text-stone-500 dark:text-stone-400 truncate">18-Fold
+                                                Precision Broth Seal</div>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs sm:text-sm font-bold bg-orange-100 dark:bg-orange-950/90 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full shrink-0">$12.50</span>
+                                </div>
+                            </div>
+
+                            <!-- Overlapping Floating Card 1: Warm Bao Bun Preview -->
+                            <div
+                                class="hidden sm:flex absolute -top-5 -right-5 lg:-right-7 p-3 bg-white dark:bg-stone-800 rounded-2xl shadow-xl border border-stone-100 dark:border-stone-700 items-center gap-3 z-20">
+                                <img src="https://images.pexels.com/photos/9980759/pexels-photo-9980759.jpeg"
+                                    alt="Char Siu Bao Bun" class="w-14 h-14 rounded-xl object-cover">
+                                <div class="pr-2 text-left">
+                                    <span
+                                        class="inline-block text-[10px] font-bold uppercase tracking-wider bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 px-2 py-0.5 rounded-full">Fresh
+                                        Batch</span>
+                                    <p class="font-bold text-stone-900 dark:text-white text-xs mt-0.5">Pillowy BBQ Pork
+                                        Bao</p>
+                                    <p class="text-[11px] text-stone-500 dark:text-stone-400">Steamed fresh in 6 mins
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 (Upper-left offset, placed separately from bottom dish card) -->
+                            <div
+                                class="hidden sm:flex absolute top-12 sm:top-14 -left-5 lg:-left-7 p-3 bg-white/95 dark:bg-stone-800/95 backdrop-blur-md rounded-2xl shadow-xl border border-stone-200/80 dark:border-stone-700 items-center gap-3 z-20">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold shrink-0">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <div class="text-left pr-2">
+                                    <p class="text-xs font-bold text-stone-900 dark:text-white">Award-Winning Taste</p>
+                                    <p class="text-[11px] text-stone-500 dark:text-stone-400">Voted #1 Dim Sum 2026</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Category Quick-Bar / Feature Strip Below Hero -->
+                <div
+                    class="mt-14 pt-8 border-t border-stone-200/80 dark:border-stone-800 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <a href="menu.html#dumplings"
+                        class="group flex items-center gap-3.5 p-3.5 rounded-xl bg-white dark:bg-stone-800/80 hover:bg-orange-50/50 dark:hover:bg-stone-800 border border-stone-200/80 dark:border-stone-700/60 transition-all hover:shadow-md hover:border-orange-500/50">
+                        <span class="text-2xl group-hover:scale-110 transition-transform">🥟</span>
+                        <div class="text-left">
+                            <span
+                                class="block text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">Classic</span>
+                            <span
+                                class="text-sm font-bold text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Soup
+                                Dumplings</span>
+                        </div>
+                    </a>
+                    <a href="menu.html#bao"
+                        class="group flex items-center gap-3.5 p-3.5 rounded-xl bg-white dark:bg-stone-800/80 hover:bg-orange-50/50 dark:hover:bg-stone-800 border border-stone-200/80 dark:border-stone-700/60 transition-all hover:shadow-md hover:border-orange-500/50">
+                        <span class="text-2xl group-hover:scale-110 transition-transform">🥪</span>
+                        <div class="text-left">
+                            <span
+                                class="block text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">Cloud-Soft</span>
+                            <span
+                                class="text-sm font-bold text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Steamed
+                                Bao</span>
+                        </div>
+                    </a>
+                    <a href="menu.html#potstickers"
+                        class="group flex items-center gap-3.5 p-3.5 rounded-xl bg-white dark:bg-stone-800/80 hover:bg-orange-50/50 dark:hover:bg-stone-800 border border-stone-200/80 dark:border-stone-700/60 transition-all hover:shadow-md hover:border-orange-500/50">
+                        <span class="text-2xl group-hover:scale-110 transition-transform">🥢</span>
+                        <div class="text-left">
+                            <span
+                                class="block text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">Pan-Fried</span>
+                            <span
+                                class="text-sm font-bold text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Potstickers
+                                & Wontons</span>
+                        </div>
+                    </a>
+                    <a href="menu.html#frozen"
+                        class="group flex items-center gap-3.5 p-3.5 rounded-xl bg-white dark:bg-stone-800/80 hover:bg-orange-50/50 dark:hover:bg-stone-800 border border-stone-200/80 dark:border-stone-700/60 transition-all hover:shadow-md hover:border-orange-500/50">
+                        <span class="text-2xl group-hover:scale-110 transition-transform">❄️</span>
+                        <div class="text-left">
+                            <span
+                                class="block text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">Takeaway</span>
+                            <span
+                                class="text-sm font-bold text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Frozen
+                                Packs</span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -220,8 +475,8 @@
                             basket.</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop"
-                            alt="Steamer" class="w-full aspect-square object-cover rounded-sm">
+                        <img src="https://images.pexels.com/photos/10277948/pexels-photo-10277948.jpeg" alt="Steamer"
+                            class="w-full aspect-square object-cover rounded-sm">
                         <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=2129&auto=format&fit=crop"
                             alt="Dumplings" class="w-full aspect-square object-cover rounded-sm">
                     </div>
@@ -229,61 +484,611 @@
             </div>
         </section>
 
-        <!-- Bao Bar -->
-        <section class="py-24 bg-orange-50 dark:bg-stone-900">
+        <!-- Bao Bar (Point 7: Perfectly Aligned Text & CTAs in Grids) -->
+        <section id="bao-bar" class="py-24 bg-orange-50/70 dark:bg-stone-900 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-serif font-bold text-stone-900 dark:text-white mb-4">The Bao Bar</h2>
-                    <p class="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">Soft, pillowy steamed buns with
-                        bold, textured fillings.</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">Cloud-Soft
+                        Delights</span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        The Bao Bar</h2>
+                    <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
+                        Soft, pillowy steamed buns filled with slow-braised proteins and aromatic marinades.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group flex flex-col h-full">
-                        <div class="h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?q=80&w=1925&auto=format&fit=crop"
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                    <!-- Bao 1: Char Siu -->
+                    <div
+                        class="bg-white dark:bg-stone-800 shadow-lg hover:shadow-xl rounded-2xl overflow-hidden group flex flex-col h-full border border-stone-200/80 dark:border-stone-700/80 transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.pexels.com/photos/9980759/pexels-photo-9980759.jpeg"
                                 alt="Char Siu Bao"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-md">Signature</span>
+                            <span
+                                class="absolute top-4 right-4 bg-stone-900/85 backdrop-blur-md text-white font-bold text-sm px-3 py-1 rounded-full">$6.50
+                                / 2pcs</span>
                         </div>
-                        <div class="p-8 text-center flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3 min-h-[5rem]">Char Siu</h3>
-                            <p class="text-stone-600 dark:text-stone-400 mb-6">Sweet roasted pork, scallions, rich soy
-                                glaze.</p>
-                            <a href="menu.html"
-                                class="mt-6 text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
-                                Now</a>
+                        <div class="p-8 text-center flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-2">Char Siu
+                                    Bao</h3>
+                                <p
+                                    class="text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider mb-4">
+                                    Roasted BBQ Pork</p>
+                                <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                                    Sweet roasted heritage pork, scallions, rich soy glaze, folded inside cloud-like
+                                    steamed dough.
+                                </p>
+                            </div>
+                            <div class="mt-8 pt-4 border-t border-stone-100 dark:border-stone-700/60">
+                                <a href="menu.html#bao"
+                                    class="w-full inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white py-3 px-6 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-orange-600/30">
+                                    <span>Order Now</span>
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group flex flex-col h-full">
-                        <div class="h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=2070&auto=format&fit=crop"
+
+                    <!-- Bao 2: Spicy Mushroom -->
+                    <div
+                        class="bg-white dark:bg-stone-800 shadow-lg hover:shadow-xl rounded-2xl overflow-hidden group flex flex-col h-full border border-stone-200/80 dark:border-stone-700/80 transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.pexels.com/photos/33111627/pexels-photo-33111627.jpeg"
                                 alt="Mushroom Bao"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-4 left-4 bg-amber-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-md">Vegetarian</span>
+                            <span
+                                class="absolute top-4 right-4 bg-stone-900/85 backdrop-blur-md text-white font-bold text-sm px-3 py-1 rounded-full">$6.50
+                                / 2pcs</span>
                         </div>
-                        <div class="p-8 text-center flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3 min-h-[5rem]">Spicy Mushroom
-                            </h3>
-                            <p class="text-stone-600 dark:text-stone-400 mb-6">Shiitake, wood ear, chili crisp,
-                                cilantro.</p>
-                            <a href="menu.html"
-                                class="mt-6 text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
-                                Now</a>
+                        <div class="p-8 text-center flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-2">Spicy
+                                    Mushroom</h3>
+                                <p
+                                    class="text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider mb-4">
+                                    Wild Forest Shiitake</p>
+                                <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                                    Shiitake mushrooms, wood ear mushroom crunch, garlic chili crisp, and fresh scallion
+                                    cilantro.
+                                </p>
+                            </div>
+                            <div class="mt-8 pt-4 border-t border-stone-100 dark:border-stone-700/60">
+                                <a href="menu.html#bao"
+                                    class="w-full inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white py-3 px-6 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-orange-600/30">
+                                    <span>Order Now</span>
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-stone-800 shadow-xl rounded-xl overflow-hidden group flex flex-col h-full">
-                        <div class="h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop"
+
+                    <!-- Bao 3: Ginger Chicken -->
+                    <div
+                        class="bg-white dark:bg-stone-800 shadow-lg hover:shadow-xl rounded-2xl overflow-hidden group flex flex-col h-full border border-stone-200/80 dark:border-stone-700/80 transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.pexels.com/photos/6126706/pexels-photo-6126706.jpeg"
                                 alt="Chicken Bao"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-4 left-4 bg-stone-800 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-md">Popular</span>
+                            <span
+                                class="absolute top-4 right-4 bg-stone-900/85 backdrop-blur-md text-white font-bold text-sm px-3 py-1 rounded-full">$6.50
+                                / 2pcs</span>
                         </div>
-                        <div class="p-8 text-center flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-3 min-h-[5rem]">Ginger Chicken
-                            </h3>
-                            <p class="text-stone-600 dark:text-stone-400 mb-6">Minced chicken, fresh ginger, sesame oil.
-                            </p>
-                            <a href="menu.html"
-                                class="mt-6 text-orange-600 dark:text-orange-400 font-semibold hover:underline uppercase text-sm tracking-wider">Order
-                                Now</a>
+                        <div class="p-8 text-center flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold font-serif text-stone-900 dark:text-white mb-2">Ginger
+                                    Chicken</h3>
+                                <p
+                                    class="text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider mb-4">
+                                    Free-Range Savory</p>
+                                <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                                    Minced chicken, fresh pungent ginger root, sesame oil, and delicate scallion broth
+                                    infusion.
+                                </p>
+                            </div>
+                            <div class="mt-8 pt-4 border-t border-stone-100 dark:border-stone-700/60">
+                                <a href="menu.html#bao"
+                                    class="w-full inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white py-3 px-6 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-orange-600/30">
+                                    <span>Order Now</span>
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Combos & Sharing Platters Section (Point 5) -->
+        <section id="combos" class="py-24 bg-stone-50 dark:bg-stone-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-wider mb-3">
+                            Popular for Groups & Gatherings
+                        </div>
+                        <h2
+                            class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white">
+                            Combos & Sharing Platters
+                        </h2>
+                        <p class="text-stone-600 dark:text-stone-400 text-base max-w-xl mt-2">
+                            Curated chef bundles designed to share. Experience our best dumplings, bao, and sides
+                            together.
+                        </p>
+                    </div>
+                    <a href="menu.html"
+                        class="inline-flex items-center gap-2 text-orange-600 dark:text-orange-400 font-semibold hover:text-orange-700 dark:hover:text-orange-300 transition-colors group">
+                        <span>View Full Menu & Sides</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+                    <!-- Combo 1 -->
+                    <div
+                        class="bg-white dark:bg-stone-800 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                        <div class="relative h-56 sm:h-60 lg:h-64 overflow-hidden shrink-0">
+                            <img src="https://images.pexels.com/photos/32860322/pexels-photo-32860322.jpeg"
+                                alt="Dim Sum Tasting Platter"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-md">Best
+                                Seller</span>
+                            <span
+                                class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-md text-white font-bold text-sm px-3 py-1 rounded-full">$34.50</span>
+                        </div>
+                        <div class="p-5 md:p-6 lg:p-8 flex flex-col flex-grow justify-between">
+                            <div class="flex flex-col">
+                                <div
+                                    class="min-h-[3.25rem] md:min-h-[3.75rem] lg:min-h-[3.25rem] flex items-center mb-2">
+                                    <h3
+                                        class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-stone-900 dark:text-white leading-snug">
+                                        Dim Sum Grand Feast</h3>
+                                </div>
+                                <div class="min-h-[1.75rem] md:min-h-[2rem] flex items-center mb-3">
+                                    <p
+                                        class="text-[11px] md:text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
+                                        Serves 2 - 3 Diners • 18 Total Pieces</p>
+                                </div>
+                                <div class="min-h-[5rem] md:min-h-[6rem] lg:min-h-[5.25rem] flex items-start mb-5">
+                                    <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+                                        6x Heritage Pork Xiao Long Bao, 6x Shrimp &amp; Ginger Dumplings, 3x Char Siu
+                                        BBQ Bao, and pickled cucumber salad with chili oil.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-stone-100 dark:border-stone-700/60 flex flex-col gap-2.5">
+                                <span class="text-xs text-stone-500 dark:text-stone-400 font-medium">Includes 3 House
+                                    Dips</span>
+                                <a href="menu.html"
+                                    class="w-full inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 active:scale-95 text-white py-2.5 px-4 rounded-full font-semibold text-xs tracking-wider uppercase transition-all shadow-sm">
+                                    <span>Order Platter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 2 -->
+                    <div
+                        class="bg-white dark:bg-stone-800 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                        <div class="relative h-56 sm:h-60 lg:h-64 overflow-hidden shrink-0">
+                            <img src="https://images.pexels.com/photos/33428721/pexels-photo-33428721.jpeg"
+                                alt="Bao Bun Trio"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-4 left-4 bg-amber-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-md">Chef's
+                                Choice</span>
+                            <span
+                                class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-md text-white font-bold text-sm px-3 py-1 rounded-full">$28.00</span>
+                        </div>
+                        <div class="p-5 md:p-6 lg:p-8 flex flex-col flex-grow justify-between">
+                            <div class="flex flex-col">
+                                <div
+                                    class="min-h-[3.25rem] md:min-h-[3.75rem] lg:min-h-[3.25rem] flex items-center mb-2">
+                                    <h3
+                                        class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-stone-900 dark:text-white leading-snug">
+                                        Bao Lover's Party Flight</h3>
+                                </div>
+                                <div class="min-h-[1.75rem] md:min-h-[2rem] flex items-center mb-3">
+                                    <p
+                                        class="text-[11px] md:text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
+                                        Serves 2 Diners • 6 Artisan Buns</p>
+                                </div>
+                                <div class="min-h-[5rem] md:min-h-[6rem] lg:min-h-[5.25rem] flex items-start mb-5">
+                                    <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+                                        2x Honey Char Siu Pork Bao, 2x Spicy Shiitake Mushroom Bao, and 2x Sesame Ginger
+                                        Chicken Bao. Served with house sesame dip.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-stone-100 dark:border-stone-700/60 flex flex-col gap-2.5">
+                                <span class="text-xs text-stone-500 dark:text-stone-400 font-medium">Pillow-Soft
+                                    Dough</span>
+                                <a href="menu.html"
+                                    class="w-full inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 active:scale-95 text-white py-2.5 px-4 rounded-full font-semibold text-xs tracking-wider uppercase transition-all shadow-sm">
+                                    <span>Order Platter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 3 -->
+                    <div
+                        class="bg-white dark:bg-stone-800 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                        <div class="relative h-56 sm:h-60 lg:h-64 overflow-hidden shrink-0">
+                            <img src="https://images.pexels.com/photos/32860330/pexels-photo-32860330.jpeg"
+                                alt="Family Steam Basket Combo"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-4 left-4 bg-stone-800 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-md">Family
+                                Size</span>
+                            <span
+                                class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-md text-white font-bold text-sm px-3 py-1 rounded-full">$46.00</span>
+                        </div>
+                        <div class="p-5 md:p-6 lg:p-8 flex flex-col flex-grow justify-between">
+                            <div class="flex flex-col">
+                                <div
+                                    class="min-h-[3.25rem] md:min-h-[3.75rem] lg:min-h-[3.25rem] flex items-center mb-2">
+                                    <h3
+                                        class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-stone-900 dark:text-white leading-snug">
+                                        Family Steam Basket Deluxe</h3>
+                                </div>
+                                <div class="min-h-[1.75rem] md:min-h-[2rem] flex items-center mb-3">
+                                    <p
+                                        class="text-[11px] md:text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
+                                        Serves 4 - 5 Diners • 28 Pieces</p>
+                                </div>
+                                <div class="min-h-[5rem] md:min-h-[6rem] lg:min-h-[5.25rem] flex items-start mb-5">
+                                    <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+                                        Full tasting spread: Xiao Long Bao (8), Crispy Pan-Fried Potstickers (8),
+                                        Vegetable Gyoza (6), Char Siu Bao (4), plus 2 Jasmine teas.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-stone-100 dark:border-stone-700/60 flex flex-col gap-2.5">
+                                <span class="text-xs text-stone-500 dark:text-stone-400 font-medium">Complete Meal
+                                    Set</span>
+                                <a href="menu.html"
+                                    class="w-full inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 active:scale-95 text-white py-2.5 px-4 rounded-full font-semibold text-xs tracking-wider uppercase transition-all shadow-sm">
+                                    <span>Order Platter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- How It Works Section (Point 5) -->
+        <section id="how-it-works" class="py-24 bg-white dark:bg-stone-950 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">Effortless
+                        Food Ordering</span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        How It Works
+                    </h2>
+                    <p class="text-lg text-stone-600 dark:text-stone-400">
+                        From fresh morning dough to piping hot bamboo steamers at your table or doorstep.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative">
+                    <!-- Step 1 -->
+                    <div
+                        class="relative bg-stone-50 dark:bg-stone-900 p-6 sm:p-7 lg:p-8 rounded-2xl border border-stone-200/80 dark:border-stone-800 text-center flex flex-col justify-between items-center h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center font-bold text-2xl mb-6 shadow-sm shrink-0">
+                            1
+                        </div>
+                        <div class="min-h-[3.75rem] sm:min-h-[4.25rem] flex items-center justify-center mb-3 w-full">
+                            <h3
+                                class="text-lg sm:text-xl font-bold font-serif text-stone-900 dark:text-white leading-snug">
+                                Explore &amp; Pick Cravings</h3>
+                        </div>
+                        <p
+                            class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed flex-grow flex items-center justify-center">
+                            Browse authentic soup dumplings, cloud-soft bao, crispy potstickers, and chef sharing
+                            platters prepared fresh daily.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="relative bg-stone-50 dark:bg-stone-900 p-6 sm:p-7 lg:p-8 rounded-2xl border border-stone-200/80 dark:border-stone-800 text-center flex flex-col justify-between items-center h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center font-bold text-2xl mb-6 shadow-sm shrink-0">
+                            2
+                        </div>
+                        <div class="min-h-[3.75rem] sm:min-h-[4.25rem] flex items-center justify-center mb-3 w-full">
+                            <h3
+                                class="text-lg sm:text-xl font-bold font-serif text-stone-900 dark:text-white leading-snug">
+                                Steamed Fresh To Order</h3>
+                        </div>
+                        <p
+                            class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed flex-grow flex items-center justify-center">
+                            Our master folding cooks prepare each basket to order in cedar bamboo steamers, locking in
+                            natural broths and tenderness.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="relative bg-stone-50 dark:bg-stone-900 p-6 sm:p-7 lg:p-8 rounded-2xl border border-stone-200/80 dark:border-stone-800 text-center flex flex-col justify-between items-center h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center font-bold text-2xl mb-6 shadow-sm shrink-0">
+                            3
+                        </div>
+                        <div class="min-h-[3.75rem] sm:min-h-[4.25rem] flex items-center justify-center mb-3 w-full">
+                            <h3
+                                class="text-lg sm:text-xl font-bold font-serif text-stone-900 dark:text-white leading-snug">
+                                Enjoy Dine-in or Express Pickup</h3>
+                        </div>
+                        <p
+                            class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed flex-grow flex items-center justify-center">
+                            Dine in our warm kitchen, grab express curbside takeaway, or order frozen retail packs to
+                            steam in 10 minutes at home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="menu.html"
+                        class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-3.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all">
+                        <span>Start Your Order</span>
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Why Choose Us Section (Point 5) -->
+        <section id="why-choose-us" class="py-24 bg-white dark:bg-stone-950 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">The
+                        Bamboo & Flour Promise</span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        Why Choose Us
+                    </h2>
+                    <p class="text-lg text-stone-600 dark:text-stone-400">
+                        In an era of mass-produced fast food, we honor time-tested heritage and honest cooking.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div
+                        class="p-8 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center hover:-translate-y-1 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center text-3xl">
+                            🥟
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">100% Hand-Pleated
+                        </h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            Every single dumpling wrapper is freshly rolled, filled, and crimped by seasoned kitchen
+                            artisans every morning.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div
+                        class="p-8 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center hover:-translate-y-1 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center text-3xl">
+                            🌿
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Zero Preservatives
+                        </h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            Natural, unbleached flour, heritage farm proteins, and fresh organic herbs. No artificial
+                            additives or frozen shortcuts.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div
+                        class="p-8 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center hover:-translate-y-1 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center text-3xl">
+                            🔥
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Cedar Bamboo Steam
+                        </h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            Steamed in natural bamboo steamers to impart subtle woody fragrance and seal in piping hot,
+                            velvety broths.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div
+                        class="p-8 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center hover:-translate-y-1 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 flex items-center justify-center text-3xl">
+                            ⚡
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Rapid Fresh Prep
+                        </h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            Speedy kitchen workflow ensures your takeout or dine-in order is ready fresh in under 15
+                            minutes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Customer Testimonials Section (Point 2 & Point 5) -->
+        <section id="testimonials"
+            class="py-24 bg-stone-100 dark:bg-stone-900/90 relative overflow-hidden transition-colors duration-300">
+            <div
+                class="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 right-10 w-80 h-80 bg-amber-500/5 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-wider mb-4 border border-orange-200 dark:border-orange-900">
+                        <span>★ ★ ★ ★ ★</span>
+                        <span>4.9 / 5 Rated by 2,400+ Diners</span>
+                    </div>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        What Our Guests Say
+                    </h2>
+                    <p class="text-lg text-stone-600 dark:text-stone-400">
+                        Real experiences from food lovers who savor the warmth, flavor, and tradition of our handmade
+                        steam kitchen.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 items-stretch">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="bg-white dark:bg-stone-800 rounded-2xl p-5 md:p-5 lg:p-8 shadow-sm hover:shadow-md border border-stone-200/80 dark:border-stone-700/80 flex flex-col justify-between h-full transition-all duration-300 group">
+                        <div class="flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-4 shrink-0">
+                                <div class="flex text-amber-500 text-sm sm:text-base">★★★★★</div>
+                                <span
+                                    class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 px-2.5 py-1 rounded-full border border-orange-100 dark:border-orange-900/50 shrink-0">Verified
+                                    Diner</span>
+                            </div>
+                            <div class="min-h-[7.5rem] sm:min-h-[8.5rem] md:min-h-[10.5rem] lg:min-h-[8.5rem] flex items-start mb-6">
+                                <p class="text-stone-700 dark:text-stone-300 text-xs sm:text-sm lg:text-base leading-relaxed italic">
+                                    "The Xiao Long Bao soup dumplings are absolute perfection. Delicate translucent skin holding an incredible explosion of rich, savory broth. You can literally taste the hours of care put into each pleat."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-stone-100 dark:border-stone-700/60 mt-auto shrink-0">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+                                alt="Elena Vance" class="w-10 h-10 rounded-full object-cover ring-2 ring-orange-500/30 shrink-0">
+                            <div class="min-w-0 flex-1">
+                                <h4 class="font-bold text-stone-900 dark:text-white text-sm md:text-sm lg:text-base whitespace-nowrap truncate">Elena Vance</h4>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 whitespace-nowrap truncate" title="Food Journalist &amp; Local Regular">Food Journalist &amp; Local Regular</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="bg-white dark:bg-stone-800 rounded-2xl p-5 md:p-5 lg:p-8 shadow-sm hover:shadow-md border border-stone-200/80 dark:border-stone-700/80 flex flex-col justify-between h-full transition-all duration-300 group">
+                        <div class="flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-4 shrink-0">
+                                <div class="flex text-amber-500 text-sm sm:text-base">★★★★★</div>
+                                <span
+                                    class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 px-2.5 py-1 rounded-full border border-orange-100 dark:border-orange-900/50 shrink-0">Weekly
+                                    Order</span>
+                            </div>
+                            <div class="min-h-[7.5rem] sm:min-h-[8.5rem] md:min-h-[10.5rem] lg:min-h-[8.5rem] flex items-start mb-6">
+                                <p class="text-stone-700 dark:text-stone-300 text-xs sm:text-sm lg:text-base leading-relaxed italic">
+                                    "Their Char Siu Bao is unmatched in tenderness! Pillow-soft, sweet-savory roasted pork filling, and they arrived piping hot. Ordering online takes under a minute, which my whole family loves."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-stone-100 dark:border-stone-700/60 mt-auto shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+                                alt="Marcus Chen" class="w-10 h-10 rounded-full object-cover ring-2 ring-orange-500/30 shrink-0">
+                            <div class="min-w-0 flex-1">
+                                <h4 class="font-bold text-stone-900 dark:text-white text-sm md:text-sm lg:text-base whitespace-nowrap truncate">Marcus Chen</h4>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 whitespace-nowrap truncate" title="Neighborhood Resident">Neighborhood Resident</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="bg-white dark:bg-stone-800 rounded-2xl p-5 md:p-5 lg:p-8 shadow-sm hover:shadow-md border border-stone-200/80 dark:border-stone-700/80 flex flex-col justify-between h-full transition-all duration-300 group">
+                        <div class="flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-4 shrink-0">
+                                <div class="flex text-amber-500 text-sm sm:text-base">★★★★★</div>
+                                <span
+                                    class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 px-2.5 py-1 rounded-full border border-orange-100 dark:border-orange-900/50 shrink-0">Event
+                                    Catering</span>
+                            </div>
+                            <div class="min-h-[7.5rem] sm:min-h-[8.5rem] md:min-h-[10.5rem] lg:min-h-[8.5rem] flex items-start mb-6">
+                                <p class="text-stone-700 dark:text-stone-300 text-xs sm:text-sm lg:text-base leading-relaxed italic">
+                                    "We booked Bamboo &amp; Flour to cater our company event with their live steamer setup. The guests couldn't stop talking about the crispy vegetable potstickers and house chili crisp. Absolute showstopper!"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-stone-100 dark:border-stone-700/60 mt-auto shrink-0">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80"
+                                alt="Sophia Martinez" class="w-10 h-10 rounded-full object-cover ring-2 ring-orange-500/30 shrink-0">
+                            <div class="min-w-0 flex-1">
+                                <h4 class="font-bold text-stone-900 dark:text-white text-sm md:text-sm lg:text-base whitespace-nowrap truncate">Sophia Martinez</h4>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 whitespace-nowrap truncate" title="Events Director, Studio 9">Events Director, Studio 9</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Trust Metric Banner -->
+                <div
+                    class="mt-12 p-6 rounded-2xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex flex-wrap items-center justify-around gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-serif font-bold text-orange-600 dark:text-orange-400">100%</div>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-medium uppercase tracking-wider mt-1">
+                            Hand-Folded Daily</p>
+                    </div>
+                    <div class="w-px h-10 bg-stone-200 dark:bg-stone-700 hidden sm:block"></div>
+                    <div>
+                        <div class="text-3xl font-serif font-bold text-stone-900 dark:text-white">150,000+</div>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-medium uppercase tracking-wider mt-1">
+                            Dumplings Steamed</p>
+                    </div>
+                    <div class="w-px h-10 bg-stone-200 dark:bg-stone-700 hidden sm:block"></div>
+                    <div>
+                        <div class="text-3xl font-serif font-bold text-stone-900 dark:text-white">&lt; 15 Mins</div>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-medium uppercase tracking-wider mt-1">
+                            Average Prep Time</p>
+                    </div>
+                    <div class="w-px h-10 bg-stone-200 dark:bg-stone-700 hidden sm:block"></div>
+                    <div>
+                        <div class="text-3xl font-serif font-bold text-orange-600 dark:text-orange-400">#1 Dim Sum</div>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-medium uppercase tracking-wider mt-1">
+                            Critics Choice Award</p>
                     </div>
                 </div>
             </div>
@@ -347,6 +1152,179 @@
             </div>
         </section>
 
+        <!-- Behind the Steam: Artisan Craft & Tradition Section -->
+        <section id="craft-heritage"
+            class="py-24 bg-stone-900 dark:bg-stone-950 text-white relative overflow-hidden transition-colors duration-300">
+            <div class="absolute inset-0 opacity-15 pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=1600&auto=format&fit=crop"
+                    alt="Steam Kitchen Atmosphere" class="w-full h-full object-cover">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div
+                            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-600/20 text-orange-400 text-xs font-bold uppercase tracking-wider border border-orange-500/30">
+                            Artisan Method &amp; Tradition
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
+                            Behind the Steam: The Art of the 18-Pleat Seal
+                        </h2>
+                        <p class="text-stone-300 text-lg leading-relaxed">
+                            Every morning at dawn, our master folding cooks begin with stone-ground heritage flour and
+                            8-hour simmered broth. No machines, no shortcuts — just generations of craft, precision, and
+                            passion inside every cedar bamboo steamer.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2 text-sm text-stone-300">
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="w-6 h-6 rounded-full bg-orange-600/30 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                <div>
+                                    <strong class="text-white block font-medium">Heritage Unbleached Flour</strong>
+                                    <span class="text-stone-400 text-xs">Hydrated &amp; rested 4 hours for delicate
+                                        translucency and tender chew.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="w-6 h-6 rounded-full bg-orange-600/30 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                <div>
+                                    <strong class="text-white block font-medium">18-Fold Precision Seal</strong>
+                                    <span class="text-stone-400 text-xs">Each dumpling is folded in under 12 seconds to
+                                        trap scalding broth securely.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="w-6 h-6 rounded-full bg-orange-600/30 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                <div>
+                                    <strong class="text-white block font-medium">8-Hour Slow Broth Aspic</strong>
+                                    <span class="text-stone-400 text-xs">Gelatinized rich broth infused with young
+                                        ginger and Shaoxing rice wine.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="w-6 h-6 rounded-full bg-orange-600/30 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                                <div>
+                                    <strong class="text-white block font-medium">Cedar Bamboo Steaming</strong>
+                                    <span class="text-stone-400 text-xs">Woven baskets absorb condensation so skins stay
+                                        silky, never waterlogged.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="menu.html"
+                                class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white px-8 py-3.5 rounded-full font-bold shadow-lg transition-all">
+                                <span>Taste Our Craft</span>
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <a href="about.html"
+                                class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-7 py-3.5 rounded-full font-semibold transition-all">
+                                <span>Read Our Story</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="relative overflow-hidden rounded-2xl shadow-lg border border-stone-800 h-64 group">
+                                <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=800&auto=format&fit=crop"
+                                    alt="Delicate handmade soup dumplings"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-3 left-3 text-xs font-semibold text-white/90">18-Fold Broth
+                                    Seal</span>
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-2xl shadow-lg border border-stone-800 h-64 mt-6 group">
+                                <img src="https://images.pexels.com/photos/10277948/pexels-photo-10277948.jpeg"
+                                    alt="Bamboo steamers in kitchen"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-3 left-3 text-xs font-semibold text-white/90">Natural Cedar
+                                    Steam</span>
+                            </div>
+                        </div>
+                        <!-- Floating Trust Badge -->
+                        <div
+                            class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-4 bg-white/95 dark:bg-stone-800/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-stone-700/60 shadow-xl flex items-center gap-2.5 text-stone-900 dark:text-white whitespace-nowrap">
+                            <span class="text-orange-500 text-base">🥟</span>
+                            <span class="text-xs font-bold">1,800+ Hand-Pleated Daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Curated Food Gallery Section (Point 5) -->
+        <section id="gallery" class="py-24 bg-stone-50 dark:bg-stone-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">Visual
+                        Feast</span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        Our Kitchen Gallery
+                    </h2>
+                    <p class="text-lg text-stone-600 dark:text-stone-400">
+                        Catch a glimpse into the artistry, heat, and textures that define our everyday craft.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=600&auto=format&fit=crop"
+                            alt="Xiao Long Bao"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-bold uppercase tracking-wider">Xiao Long Bao</span>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?q=80&w=600&auto=format&fit=crop"
+                            alt="Char Siu Bao"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-bold uppercase tracking-wider">Pillowy BBQ Pork
+                                Bao</span>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=600&auto=format&fit=crop"
+                            alt="Golden Potstickers"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-bold uppercase tracking-wider">Crispy Pan-Fried
+                                Gyoza</span>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                        <img src="https://images.pexels.com/photos/8093294/pexels-photo-8093294.jpeg"
+                            alt="Hand pleating craft"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-bold uppercase tracking-wider">Artisan Folding
+                                Station</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Split CTA -->
         <!-- CTA Section -->
         <section class="py-24 bg-orange-600 relative overflow-hidden">
@@ -365,7 +1343,8 @@
             </div>
         </section>
     </main>
-    <footer class="bg-stone-100 dark:bg-stone-950 text-stone-600 dark:text-stone-300 py-16 border-t-4 border-orange-600">
+    <footer
+        class="bg-stone-100 dark:bg-stone-950 text-stone-600 dark:text-stone-300 py-16 border-t-4 border-orange-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Brand -->
@@ -389,13 +1368,17 @@
                         dumpling and bao we serve.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors" aria-label="Instagram">
+                        <a href="#"
+                            class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors"
+                            aria-label="Instagram">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#"
+                            class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors"
+                            aria-label="Facebook">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
@@ -406,30 +1389,48 @@
 
                 <!-- Explore -->
                 <div>
-                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+                        Explore</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="index.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About Us</a></li>
-                        <li><a href="menu.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Menu</a></li>
-                        <li><a href="blog.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Journal & Blog</a></li>
+                        <li><a href="index.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About
+                                Us</a></li>
+                        <li><a href="menu.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Menu</a>
+                        </li>
+                        <li><a href="blog.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Journal
+                                & Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Customer -->
                 <div>
-                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Customer</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+                        Customer</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="contact.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact &
-                                Enquiries</a></li>
-                        <li><a href="login.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Account Login</a></li>
-                        <li><a href="signup.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Create Account</a>
-                        </li>
+                        <li><a href="menu.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Order
+                                Online</a></li>
+                        <li><a href="contact.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Table
+                                Reservations</a></li>
+                        <li><a href="contact.html#catering"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Catering
+                                & Private Events</a></li>
+                        <li><a href="contact.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact
+                                & Enquiries</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div>
-                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+                        Contact Us</h3>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
@@ -465,8 +1466,12 @@
                 class="mt-16 pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 dark:text-stone-400">
                 <p>&copy; 2026 Bamboo & Flour. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Terms
+                        of Service</a>
                 </div>
             </div>
         </div>

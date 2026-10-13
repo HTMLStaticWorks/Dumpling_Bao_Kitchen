@@ -72,4 +72,40 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('text-stone-600', 'dark:text-stone-300', 'text-stone-900');
         }
     });
+
+    // Interactive Food Ordering Cart Logic
+    let cartCount = 0;
+    let cartTotal = 0.00;
+    const badgeEl = document.getElementById('order-badge');
+    const totalEl = document.getElementById('order-total-price');
+
+    // Create Toast Container
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-24 right-6 z-50 transform translate-x-96 transition-all duration-300 bg-stone-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-orange-500/50 flex items-center gap-3 pointer-events-none opacity-0';
+    toast.innerHTML = `<span class="text-xl">🥟</span> <span id="toast-text" class="text-sm font-semibold">Added to your order!</span>`;
+    document.body.appendChild(toast);
+
+    function showOrderToast(msg) {
+        const text = document.getElementById('toast-text');
+        if (text) text.textContent = msg;
+        toast.classList.remove('translate-x-96', 'opacity-0');
+        toast.classList.add('translate-x-0', 'opacity-100');
+        setTimeout(() => {
+            toast.classList.remove('translate-x-0', 'opacity-100');
+            toast.classList.add('translate-x-96', 'opacity-0');
+        }, 2500);
+    }
+
+    document.querySelectorAll('.add-to-order-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            cartCount++;
+            cartTotal += 8.50; // Average dish price
+            if (badgeEl) badgeEl.textContent = cartCount;
+            if (totalEl) totalEl.textContent = `$${cartTotal.toFixed(2)}`;
+            const dishName = btn.closest('.flex-grow')?.querySelector('h3')?.textContent || 'Handmade Dish';
+            showOrderToast(`Added ${dishName} to order!`);
+        });
+    });
+
 });

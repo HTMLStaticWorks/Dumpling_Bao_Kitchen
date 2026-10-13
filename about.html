@@ -117,9 +117,14 @@
                         RTL
                     </button>
 
-                    <a href="signup.html"
-                        class="bg-orange-600 hover:bg-orange-700 text-white px-5 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-lg">Sign
-                        Up</a>
+                    <a href="menu.html"
+                        class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-orange-600/30">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span>Order Now</span>
+                    </a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -153,8 +158,10 @@
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Blog</a>
                 <a href="contact.html"
                     class="mobile-nav-link block px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">Contact</a>
-                <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-200 dark:border-stone-800 flex flex-col gap-3">
-                    <button id="mobile-theme-toggle" class="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">
+                <div
+                    class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-200 dark:border-stone-800 flex flex-col gap-3">
+                    <button id="mobile-theme-toggle"
+                        class="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800 hover:text-orange-600 dark:hover:text-orange-400">
                         Toggle Theme
                         <div>
                             <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,7 +169,8 @@
                                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
                                 </path>
                             </svg>
-                            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
                                 </path>
@@ -173,14 +181,20 @@
                         class="w-full text-left px-3 py-2 text-base font-medium text-stone-900 dark:text-white rounded-md hover:bg-orange-50 dark:hover:bg-stone-800">Toggle
                         RTL/LTR</button>
 
-                    <a href="signup.html"
-                        class="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-full font-medium transition-colors">Sign
-                        Up</a>
+                    <a href="menu.html"
+                        class="flex items-center justify-center gap-2 w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-full font-semibold transition-colors shadow-md">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span>Order Now</span>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
     <main class="pt-20 flex-grow">
+        <!-- Hero: Our Story -->
         <section class="relative bg-stone-900 overflow-hidden py-32 flex items-center text-center">
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2070&auto=format&fit=crop"
@@ -188,86 +202,393 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-stone-900/30"></div>
             </div>
             <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10">
+                <div
+                    class="inline-block bg-orange-600/30 border border-orange-500/40 text-orange-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+                    Our Heritage & Craft
+                </div>
                 <h1 class="text-5xl md:text-6xl font-serif font-bold text-white mb-6">Our Story</h1>
-                <p class="text-xl text-stone-200">Born from a passion for authentic flavors and
-                    modern hospitality.</p>
+                <p class="text-xl text-stone-200 max-w-2xl mx-auto">
+                    Born from a passion for authentic culinary traditions, hand-pleated artistry, and warm modern
+                    hospitality.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 bg-white dark:bg-stone-950">
+        <!-- Section: Our Food Philosophy -->
+        <section id="philosophy" class="py-24 bg-white dark:bg-stone-950 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <img src="https://images.pexels.com/photos/8093294/pexels-photo-8093294.jpeg"
-                        class="w-full h-96 object-cover rounded-xl shadow-lg">
-                    <div>
-                        <h2 class="text-3xl font-serif font-bold mb-6 text-stone-900 dark:text-white">The Steam Kitchen
-                            Philosophy</h2>
-                        <p class="text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">Bamboo & Flour started with a
-                            simple belief: the best food is made by hand. We wanted to create a space that celebrates
-                            the artistry of folding dough and the comforting warmth of a bamboo steamer.</p>
-                        <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Every morning, our kitchen comes
-                            alive with the sound of chopping, kneading, and the hiss of steam. We don't take shortcuts
-                            because we know you can taste the difference.</p>
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/8093294/pexels-photo-8093294.jpeg"
+                            alt="Dumpling folding craft in kitchen"
+                            class="w-full h-[450px] object-cover rounded-2xl shadow-xl border border-stone-100 dark:border-stone-800">
+                        <div
+                            class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 p-4 sm:p-5 rounded-2xl bg-orange-600/95 backdrop-blur-sm text-white shadow-2xl max-w-[280px] sm:max-w-xs z-10">
+                            <p class="font-serif font-bold text-sm sm:text-base leading-tight">"No shortcuts. No industrial
+                                presses. Just skilled hands, time, and steam."</p>
+                            <p class="text-[11px] text-orange-200 mt-2 uppercase tracking-wider font-semibold">— Chef
+                                Wei Lin</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-wider">
+                            Handmade Authenticity
+                        </div>
+                        <h2
+                            class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 dark:text-white leading-tight">
+                            Our Food Philosophy: The Steam Kitchen Way
+                        </h2>
+                        <p class="text-stone-600 dark:text-stone-300 leading-relaxed text-base">
+                            Bamboo & Flour began with a simple conviction: food made with pure intent, patience, and
+                            skilled hands carries a flavor that machines can never replicate. In our kitchen, every
+                            dumpling is rolled thin at the edges, thick at the center, and sealed with traditional
+                            rhythmic folds.
+                        </p>
+                        <p class="text-stone-600 dark:text-stone-300 leading-relaxed text-base">
+                            We believe that food should comfort and energize. That’s why we refuse artificial binders,
+                            excess sodium, or frozen shortcuts. Every morning, our chefs begin before sunrise: simmering
+                            rich chicken and pork bone broths for eight hours, mincing crisp aromatics, and resting the
+                            flour dough to achieve that quintessential bite.
+                        </p>
+                        <div class="pt-4 flex items-center gap-6">
+                            <div>
+                                <div class="text-2xl font-serif font-bold text-orange-600 dark:text-orange-400">18 Folds
+                                </div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider">
+                                    Broth-Seal Standard</p>
+                            </div>
+                            <div class="w-px h-10 bg-stone-200 dark:bg-stone-700"></div>
+                            <div>
+                                <div class="text-2xl font-serif font-bold text-stone-900 dark:text-white">8 Hours</div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider">Bone
+                                    Broth Simmer</p>
+                            </div>
+                            <div class="w-px h-10 bg-stone-200 dark:bg-stone-700"></div>
+                            <div>
+                                <div class="text-2xl font-serif font-bold text-stone-900 dark:text-white">Daily Fresh
+                                </div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider">No Frozen
+                                    Buns</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-stone-900 text-white">
+        <!-- Section: What Makes Us Special -->
+        <section id="special" class="py-24 bg-stone-50 dark:bg-stone-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">Our
+                        Distinction</span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        What Makes Us Special
+                    </h2>
+                    <p class="text-lg text-stone-600 dark:text-stone-400">
+                        Discover the subtle nuances and painstaking techniques that make every meal at Bamboo & Flour
+                        uniquely memorable.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white dark:bg-stone-800 p-8 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 flex items-center justify-center text-2xl mb-6">
+                            🤲
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Master Hand-Rolling
+                        </h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            We roll our wrappers by hand so the perimeter remains delicate and thin while the center
+                            retains strength to cradle steaming broth.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-stone-800 p-8 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 flex items-center justify-center text-2xl mb-6">
+                            🎋
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Natural Bamboo
+                            Steaming</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            Bamboo absorbs excess vapor to prevent sogginess, imbuing every dumpling and bao with a
+                            subtle herbal warmth.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-stone-800 p-8 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 flex items-center justify-center text-2xl mb-6">
+                            🌶️
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Artisanal House
+                            Sauces</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            From 24-hour slow-infused garlic chili crisp to aged Zhenjiang black vinegar, our condiments
+                            are blended in-house.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-stone-800 p-8 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 flex items-center justify-center text-2xl mb-6">
+                            ☁️
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-stone-900 dark:text-white mb-3">Double-Fermented
+                            Bao</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                            Our bao dough undergoes slow dual-stage natural proofing, creating signature cloud-like
+                            texture and sweet aroma.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Our Ingredients & Sourcing -->
+        <section id="ingredients" class="py-24 bg-stone-900 text-white transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-serif font-bold mb-4">Ingredients & Sourcing</h2>
-                    <p class="text-stone-400 max-w-2xl mx-auto">Great food starts with great ingredients.</p>
+                    <span class="text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">Uncompromising
+                        Quality</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">Our Ingredients & Sourcing
+                    </h2>
+                    <p class="text-stone-400 max-w-2xl mx-auto">Great food starts with great ingredients. We partner
+                        directly with regional farms and trusted purveyors.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-6 border border-stone-200 dark:border-stone-700 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-orange-500 min-h-[3.75rem]">Fresh Vegetables</h3>
-                        <p class="text-stone-400">Crisp cabbage, vibrant garlic chives, and earthy shiitake mushrooms,
-                            chopped fresh daily to maintain crunch and flavor.</p>
+                    <div
+                        class="p-8 border border-stone-800 bg-stone-950/60 rounded-2xl hover:border-orange-500/50 transition-colors">
+                        <div class="text-3xl mb-4">🥬</div>
+                        <h3 class="text-xl font-bold mb-3 text-orange-400 font-serif">Fresh Vegetables</h3>
+                        <p class="text-stone-400 leading-relaxed text-sm">Crisp cabbage, vibrant garlic chives, and
+                            earthy shiitake mushrooms, delivered daily from local green markets and chopped every
+                            morning to maintain vital crunch and natural sweet juices.</p>
                     </div>
-                    <div class="p-6 border border-stone-200 dark:border-stone-700 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-orange-500 min-h-[3.75rem]">Quality Proteins</h3>
-                        <p class="text-stone-400">We source premium heritage pork and free-range chicken, ensuring rich,
-                            savory fillings with perfect texture.</p>
+                    <div
+                        class="p-8 border border-stone-800 bg-stone-950/60 rounded-2xl hover:border-orange-500/50 transition-colors">
+                        <div class="text-3xl mb-4">🥩</div>
+                        <h3 class="text-xl font-bold mb-3 text-orange-400 font-serif">Quality Heritage Proteins</h3>
+                        <p class="text-stone-400 leading-relaxed text-sm">We source pasture-raised heritage pork and
+                            free-range chicken from cooperative family farms, ensuring ethical stewardship, rich
+                            unadulterated flavor, and melt-in-mouth filling texture.</p>
                     </div>
-                    <div class="p-6 border border-stone-200 dark:border-stone-700 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-orange-500 min-h-[3.75rem]">Careful Aromatics</h3>
-                        <p class="text-stone-400">Ginger, garlic, scallions, and pure sesame oil form the aromatic
-                            backbone of our signature recipes.</p>
+                    <div
+                        class="p-8 border border-stone-800 bg-stone-950/60 rounded-2xl hover:border-orange-500/50 transition-colors">
+                        <div class="text-3xl mb-4">🧄</div>
+                        <h3 class="text-xl font-bold mb-3 text-orange-400 font-serif">Careful Aromatics</h3>
+                        <p class="text-stone-400 leading-relaxed text-sm">Aged yellow ginger root, pungent scallions,
+                            stone-pressed toasted sesame oil, and artisanal Shaoxing cooking wine form the delicate
+                            aromatic backbone of our generational recipes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-orange-50 dark:bg-stone-900">
+        <!-- Section: Meet the Team / Our Chef -->
+        <section id="team" class="py-24 bg-white dark:bg-stone-950 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">The
+                        Hands Behind the Craft</span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-white mb-4">
+                        Meet the Team & Our Chefs
+                    </h2>
+                    <p class="text-lg text-stone-600 dark:text-stone-400">
+                        Led by passionate masters dedicated to preserving ancestral folding traditions with contemporary
+                        hospitality.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 items-stretch">
+                    <!-- Chef 1 -->
+                    <div
+                        class="bg-stone-50 dark:bg-stone-900 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full group">
+                        <div class="h-64 sm:h-72 lg:h-80 overflow-hidden relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop"
+                                alt="Chef Wei Lin"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent">
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 text-white flex">
+                                <span
+                                    class="inline-block text-[10px] md:text-[11px] lg:text-xs uppercase tracking-wider font-semibold bg-orange-600/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md whitespace-nowrap truncate max-w-full">Executive
+                                    Dim Sum Master</span>
+                            </div>
+                        </div>
+                        <div class="p-5 md:p-5 lg:p-7 flex flex-col flex-grow justify-between">
+                            <div class="flex flex-col">
+                                <div class="min-h-[2.5rem] md:min-h-[3.25rem] lg:min-h-[2.75rem] flex items-center mb-1">
+                                    <h3 class="text-xl md:text-xl lg:text-2xl font-serif font-bold text-stone-900 dark:text-white leading-tight">Chef Wei Lin</h3>
+                                </div>
+                                <div class="min-h-[2rem] md:min-h-[2.75rem] lg:min-h-[2rem] flex items-center mb-3">
+                                    <p class="text-[11px] md:text-xs text-orange-600 dark:text-orange-400 font-semibold uppercase tracking-wider leading-snug">
+                                        30+ Years Culinary Heritage
+                                    </p>
+                                </div>
+                                <div class="min-h-[6.5rem] md:min-h-[9rem] lg:min-h-[7rem] flex items-start mb-5">
+                                    <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+                                        Trained in classic Taiwanese and Shanghai dim sum institutions, Chef Wei brings three decades of uncompromising precision to our signature 18-fold Xiao Long Bao.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-4 border-t border-stone-200 dark:border-stone-800 min-h-[3.75rem] flex items-center">
+                                <p class="text-xs italic text-stone-500 dark:text-stone-400 leading-relaxed">
+                                    "The fold is not just decoration—it is the engineering of pure flavor."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chef 2 -->
+                    <div
+                        class="bg-stone-50 dark:bg-stone-900 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full group">
+                        <div class="h-64 sm:h-72 lg:h-80 overflow-hidden relative shrink-0">
+                            <img src="https://images.pexels.com/photos/30232344/pexels-photo-30232344.jpeg"
+                                alt="Chef Mei-Ling Zhang"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent">
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 text-white flex">
+                                <span
+                                    class="inline-block text-[10px] md:text-[11px] lg:text-xs uppercase tracking-wider font-semibold bg-orange-600/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md whitespace-nowrap truncate max-w-full">Head
+                                    Bao &amp; Dough Artisan</span>
+                            </div>
+                        </div>
+                        <div class="p-5 md:p-5 lg:p-7 flex flex-col flex-grow justify-between">
+                            <div class="flex flex-col">
+                                <div class="min-h-[2.5rem] md:min-h-[3.25rem] lg:min-h-[2.75rem] flex items-center mb-1">
+                                    <h3 class="text-xl md:text-xl lg:text-2xl font-serif font-bold text-stone-900 dark:text-white leading-tight">Mei-Ling Zhang</h3>
+                                </div>
+                                <div class="min-h-[2rem] md:min-h-[2.75rem] lg:min-h-[2rem] flex items-center mb-3">
+                                    <p class="text-[11px] md:text-xs text-orange-600 dark:text-orange-400 font-semibold uppercase tracking-wider leading-snug">
+                                        Master Baker &amp; Dough Alchemist
+                                    </p>
+                                </div>
+                                <div class="min-h-[6.5rem] md:min-h-[9rem] lg:min-h-[7rem] flex items-start mb-5">
+                                    <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+                                        Mei-Ling perfected our signature cloud-soft steamed bao recipe through countless rounds of fermentation and proofing calibration, marrying lightness with decadent filling.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-4 border-t border-stone-200 dark:border-stone-800 min-h-[3.75rem] flex items-center">
+                                <p class="text-xs italic text-stone-500 dark:text-stone-400 leading-relaxed">
+                                    "Every bao should feel like opening a warm, fluffy cloud."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div
+                        class="bg-stone-50 dark:bg-stone-900 rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full group">
+                        <div class="h-64 sm:h-72 lg:h-80 overflow-hidden relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                                alt="Kenji Takahashi"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent">
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 text-white flex">
+                                <span
+                                    class="inline-block text-[10px] md:text-[11px] lg:text-xs uppercase tracking-wider font-semibold bg-stone-900/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md whitespace-nowrap truncate max-w-full">Director
+                                    of Hospitality</span>
+                            </div>
+                        </div>
+                        <div class="p-5 md:p-5 lg:p-7 flex flex-col flex-grow justify-between">
+                            <div class="flex flex-col">
+                                <div class="min-h-[2.5rem] md:min-h-[3.25rem] lg:min-h-[2.75rem] flex items-center mb-1">
+                                    <h3 class="text-xl md:text-xl lg:text-2xl font-serif font-bold text-stone-900 dark:text-white leading-tight">Kenji Takahashi</h3>
+                                </div>
+                                <div class="min-h-[2rem] md:min-h-[2.75rem] lg:min-h-[2rem] flex items-center mb-3">
+                                    <p class="text-[11px] md:text-xs text-orange-600 dark:text-orange-400 font-semibold uppercase tracking-wider leading-snug">
+                                        Guest Experience &amp; Community
+                                    </p>
+                                </div>
+                                <div class="min-h-[6.5rem] md:min-h-[9rem] lg:min-h-[7rem] flex items-start mb-5">
+                                    <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+                                        Kenji oversees the dining atmosphere and ordering operations, ensuring that whether you join us at our communal dining tables or order for pickup, you are met with genuine warmth.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-4 border-t border-stone-200 dark:border-stone-800 min-h-[3.75rem] flex items-center">
+                                <p class="text-xs italic text-stone-500 dark:text-stone-400 leading-relaxed">
+                                    "Hospitality is measured by how comforted our guests feel."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Our Core Values -->
+        <section class="py-24 bg-orange-50/70 dark:bg-stone-900 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-serif font-bold mb-12 text-stone-900 dark:text-white">Our Core Values</h2>
+                <span
+                    class="text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest block mb-2">Our
+                    Foundation</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-12 text-stone-900 dark:text-white">Our Core
+                    Values</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div>
+                    <div
+                        class="p-6 bg-white dark:bg-stone-800 rounded-2xl shadow-sm border border-orange-100 dark:border-stone-700">
                         <div class="text-4xl mb-4">🤲</div>
-                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white">Craft</h3>
-                        <p class="text-stone-600 dark:text-stone-400">Dedicated to the handmade tradition.</p>
+                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white font-serif">Craft</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm">Dedicated to the sacred handmade folding
+                            tradition without compromise.</p>
                     </div>
-                    <div>
+                    <div
+                        class="p-6 bg-white dark:bg-stone-800 rounded-2xl shadow-sm border border-orange-100 dark:border-stone-700">
                         <div class="text-4xl mb-4">🥬</div>
-                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white">Freshness</h3>
-                        <p class="text-stone-600 dark:text-stone-400">Made daily, never compromised.</p>
+                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white font-serif">Freshness</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm">Every element chopped, filled, and steamed
+                            fresh each and every day.</p>
                     </div>
-                    <div>
+                    <div
+                        class="p-6 bg-white dark:bg-stone-800 rounded-2xl shadow-sm border border-orange-100 dark:border-stone-700">
                         <div class="text-4xl mb-4">🥢</div>
-                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white">Hospitality</h3>
-                        <p class="text-stone-600 dark:text-stone-400">Welcoming every guest with warmth.</p>
+                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white font-serif">Hospitality</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm">Welcoming every guest with sincerity,
+                            attentiveness, and steaming food.</p>
                     </div>
-                    <div>
+                    <div
+                        class="p-6 bg-white dark:bg-stone-800 rounded-2xl shadow-sm border border-orange-100 dark:border-stone-700">
                         <div class="text-4xl mb-4">🎯</div>
-                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white">Consistency</h3>
-                        <p class="text-stone-600 dark:text-stone-400">Perfectly steamed, every single time.</p>
+                        <h3 class="text-xl font-bold mb-2 text-stone-900 dark:text-white font-serif">Consistency</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm">Perfect chew, burst of broth, and flawless
+                            seasoning every single time.</p>
                     </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="menu.html"
+                        class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-orange-600/30 transition-all text-base">
+                        <span>Explore Our Menu & Order</span>
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="bg-stone-100 dark:bg-stone-950 text-stone-600 dark:text-stone-300 py-16 border-t-4 border-orange-600">
+    <footer
+        class="bg-stone-100 dark:bg-stone-950 text-stone-600 dark:text-stone-300 py-16 border-t-4 border-orange-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Brand -->
@@ -291,13 +612,17 @@
                         dumpling and bao we serve.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors" aria-label="Instagram">
+                        <a href="#"
+                            class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors"
+                            aria-label="Instagram">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#"
+                            class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors"
+                            aria-label="Facebook">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
@@ -308,30 +633,48 @@
 
                 <!-- Explore -->
                 <div>
-                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+                        Explore</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="index.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About Us</a></li>
-                        <li><a href="menu.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Menu</a></li>
-                        <li><a href="blog.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Journal & Blog</a></li>
+                        <li><a href="index.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About
+                                Us</a></li>
+                        <li><a href="menu.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Menu</a>
+                        </li>
+                        <li><a href="blog.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Journal
+                                & Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Customer -->
                 <div>
-                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Customer</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+                        Customer</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="contact.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact &
-                                Enquiries</a></li>
-                        <li><a href="login.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Account Login</a></li>
-                        <li><a href="signup.html" class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Create Account</a>
-                        </li>
+                        <li><a href="menu.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Order
+                                Online</a></li>
+                        <li><a href="contact.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Table
+                                Reservations</a></li>
+                        <li><a href="contact.html#catering"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Catering
+                                & Private Events</a></li>
+                        <li><a href="contact.html"
+                                class="text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact
+                                & Enquiries</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div>
-                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contact Us</h3>
+                    <h3 class="text-stone-900 dark:text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+                        Contact Us</h3>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
@@ -367,8 +710,12 @@
                 class="mt-16 pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 dark:text-stone-400">
                 <p>&copy; 2026 Bamboo & Flour. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-white transition-colors">Terms
+                        of Service</a>
                 </div>
             </div>
         </div>
